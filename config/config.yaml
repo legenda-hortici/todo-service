@@ -1,0 +1,16 @@
+env: "local"
+
+http_server:
+  host: "localhost:"
+  port: "8080"
+  timeout: 4s
+  idle_timeout: 60s
+  user: "user"
+  password: "password"
+
+database:
+  host: "localhost"
+  port: 5433
+  user: "postgres"
+  password: 0897
+  name: "todolist"
