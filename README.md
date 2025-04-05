@@ -17,8 +17,8 @@
 ### 1. Нужно клонировать репозиторий
 
 ```bash
-git clone https://github.com/your_username/todo-fiber-app.git
-cd todo-fiber-app
+git clone https://github.com/legenda-hortici/todo-service.git
+cd todo-service
 ```
 
 ### 2. Настройка .env файл
@@ -43,3 +43,23 @@ docker run --name postgres_alt \
 ```bash
 go run cmd/api/main.go
 ```
+---
+
+Приложение запускается по адресу: http://localhost:8080
+
+Можно тестировать с помощью:
+
+- Postman
+
+- curl
+
+##  Возможности
+- Добавление задач
+
+- Обновление статуса
+
+- Удаление задач
+
+- Получение списка задач
+
+- Статусы: new, in_progress, done
