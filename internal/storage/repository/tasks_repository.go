@@ -3,7 +3,7 @@ package repository
 import (
 	"context"
 	"fmt"
-	"todo-service/internal/storage/domain"
+	"todo-service/pkg/domain"
 
 	"github.com/jackc/pgx/v5"
 )

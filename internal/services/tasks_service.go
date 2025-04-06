@@ -2,8 +2,8 @@ package services
 
 import (
 	"fmt"
-	"todo-service/internal/storage/domain"
 	"todo-service/internal/storage/repository"
+	"todo-service/pkg/domain"
 )
 
 type ITasksService interface {

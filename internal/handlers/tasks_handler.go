@@ -4,8 +4,8 @@ import (
 	"errors"
 	"log"
 	"todo-service/internal/services"
-	"todo-service/internal/storage/domain"
-	"todo-service/pkg/dto"
+	"todo-service/pkg/domain"
+	"todo-service/internal/dto"
 
 	"github.com/gofiber/fiber/v2"
 )
