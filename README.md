@@ -14,14 +14,14 @@
 
 ## Запуск приложения
 
-### 1. Нужно клонировать репозиторий
+### 1. Клонировать репозиторий
 
 ```bash
 git clone https://github.com/legenda-hortici/todo-service.git
 cd todo-service
 ```
 
-### 2. Настройка .env файл
+### 2. Настроить .env файл
 Создайте файл .env в корне проекта:
 ```env
 CONFIG_PATH=config/config.yaml
