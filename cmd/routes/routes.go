@@ -4,9 +4,9 @@ import (
 	"todo-service/internal/handlers"
 	"todo-service/internal/services"
 	"todo-service/internal/storage/repository"
+	"todo-service/pkg/middleware"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/gofiber/fiber/v2/middleware/logger"
 	"github.com/jackc/pgx/v5"
 )
 
@@ -16,9 +16,7 @@ func InitRoutes(port string, conn *pgx.Conn) *fiber.App {
 	app.Use(func(c *fiber.Ctx) error {
 		return c.Next()
 	})
-	app.Use(logger.New(logger.Config{
-		Format: "[${ip}]:${port} ${status} - ${method} ${path}\n",
-	}))
+	app.Use(middleware.LoggerMiddleware())
 
 	repo := repository.NewTasksRepository(conn)
 	services := services.NewTasksService(repo)
@@ -31,7 +29,6 @@ func InitRoutes(port string, conn *pgx.Conn) *fiber.App {
 		api.Put("/tasks/:id", handlers.UpdateTask)
 		api.Delete("/tasks/:id", handlers.DeleteTask)
 	}
-		
 
 	return app
 }
