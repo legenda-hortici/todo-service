@@ -3,9 +3,9 @@ package handlers
 import (
 	"errors"
 	"log"
-	"todo-service/internal/dto"
 	"todo-service/internal/services"
 	"todo-service/internal/storage/domain"
+	"todo-service/pkg/dto"
 
 	"github.com/gofiber/fiber/v2"
 )
